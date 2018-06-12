@@ -15,6 +15,17 @@ public class Usuario {
     private String login;
     private byte[] senha;
     private Collection<Log> logs;
+    private Collection<Aluguel> alugueis;
+
+
+    @OneToMany(mappedBy = "usuario")
+    public Collection<Aluguel> getAlugueis() {
+        return alugueis;
+    }
+
+    public void setAlugueis(Collection<Aluguel> alugueis) {
+        this.alugueis = alugueis;
+    }
 
     @OneToMany(mappedBy = "usuario")
     public Collection<Log> getLogs() {

@@ -5,5 +5,7 @@
     <session-factory>
         <mapping class="br.ufsm.csi.seguranca.model.Usuario" />
         <mapping class="br.ufsm.csi.seguranca.model.Log" />
+        <mapping class="br.ufsm.csi.seguranca.model.Aluguel" />
+        <mapping class="br.ufsm.csi.seguranca.model.Carro" />
     </session-factory>
 </hibernate-configuration>

@@ -14,8 +14,9 @@
           <element id="library" level="project" name="javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="org.apache.commons:commons-dbcp2:2.0" />
           <element id="library" level="project" name="org.postgresql:postgresql:9.4.1212.jre7" />
-          <element id="library" level="project" name="hsqldb" />
           <element id="library" level="project" name="org.owasp.encoder:encoder-esapi:1.2.1" />
+          <element id="library" level="project" name="postgresql-9.3-1104-jdbc41" />
+          <element id="library" level="project" name="javax.servlet:javax.servlet-api:3.0.1" />
         </element>
       </element>
     </root>
