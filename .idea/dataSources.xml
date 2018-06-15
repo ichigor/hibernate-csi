@@ -7,5 +7,14 @@
       <jdbc-driver>org.hsqldb.jdbcDriver</jdbc-driver>
       <jdbc-url>jdbc:hsqldb:hsql://localhost:9001/</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="baseTopicos@localhost" uuid="3bd75f18-fea9-4895-a9b0-22b5b5c4248a">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/baseTopicos</jdbc-url>
+      <driver-properties>
+        <property name="ApplicationName" value="DataGrip" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>

@@ -8,10 +8,10 @@ import java.util.Collections;
 @Table(name = "CARRO")
 public class Carro {
 
-    private int idCarro;
+    private Long id;
     private String marca;
     private String placa;
-    private int ano;
+    private Long ano;
     private boolean alugado;
     private Collection<Aluguel> alugueis;
 
@@ -19,12 +19,12 @@ public class Carro {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_carro")
     @SequenceGenerator(name = "seq_carro", sequenceName = "seq_carro")
     @Column(name = "ID")
-    public int getIdCarro() {
-        return idCarro;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdCarro(int idCarro) {
-        this.idCarro = idCarro;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @OneToMany(mappedBy = "carro")
@@ -55,11 +55,11 @@ public class Carro {
     }
 
     @Column(name = "ANO")
-    public int getAno() {
+    public Long getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(Long ano) {
         this.ano = ano;
     }
 
