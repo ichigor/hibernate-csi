@@ -23,14 +23,22 @@ public class CarroController {
     @Transactional
     @RequestMapping("create-carro.html")
     public String cadastraCarro(Carro carro) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        hibernateDAO.criaObjeto(carro);
+        if(carro.getId() == null) {
+            hibernateDAO.criaObjeto(carro);
+        } else {
+            Carro carroBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, carro.getId());
+            carroBanco.setId(carro.getId());
+            carroBanco.setAno(carro.getAno());
+            carroBanco.setMarca(carro.getMarca());
+        }
+
         return "forward:list-carros.html";
     }
 
 
     @Transactional
     @RequestMapping("list-carros.html")
-    public String ListaCarros(Model model, String nome, String login) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public String listaCarros(Model model, String nome, String login) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         Map<String, String> m = new HashMap<>();
         model.addAttribute("carros", hibernateDAO.listaObjetos(Carro.class, m, null, null, false));
         return "listar-carros";
@@ -44,16 +52,16 @@ public class CarroController {
 
     @Transactional
     @RequestMapping("delete-carro.html")
-    public String ListaCarros(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public String deletarCarro(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Carro.class, id));
         return "forward:list-carros.html";
     }
 
     @Transactional
     @RequestMapping("edit-carro.html")
-    public String EditarCarro(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-//        Carro carro = (Carro) hibernateDAO.carregaObjeto(Carro.class, id);
-//        hibernateDAO.criaObjeto(carro);
+    public String editarCarro(Long id, Model model) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        Carro carro = (Carro) hibernateDAO.carregaObjeto(Carro.class, id);
+        model.addAttribute("carro", carro);
         return "editar-carro";
     }
 }

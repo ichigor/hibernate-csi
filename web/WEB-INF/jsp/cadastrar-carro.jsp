@@ -11,7 +11,11 @@
         <title>Cadastrar Carro</title>
     </head>
     <body>
+        <a href="create-usuario.html">Cadastrar Usuario</a>
+        <a href="cadastrar-aluguel.html">Cadastrar Aluguel</a>
+        <a href="lista-usuarios.html">Listar Usuarios</a>
         <a href="list-carros.html">Listar Carros</a>
+        <a href="list-alugueis.html">Listar Alugueis</a>
         <form action="create-carro.html" method="post">
             <p>Marca:</p>
             <input type="text" name="marca">

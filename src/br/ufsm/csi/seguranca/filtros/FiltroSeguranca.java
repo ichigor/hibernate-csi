@@ -22,7 +22,7 @@ public class FiltroSeguranca implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         if (request.getSession().getAttribute("usuario") == null) {
-            ((HttpServletResponse) servletResponse).sendRedirect("login.html");
+            ((HttpServletResponse) servletResponse).sendRedirect("/spring-teste");
         } else {
             filterChain.doFilter(servletRequest, servletResponse);
         }

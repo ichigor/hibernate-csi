@@ -11,6 +11,12 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <form action="login.html" method="post">
+    <p>Login:</p>
+    <input type="login" name="login">
+    <p>Senha</p>
+    <input type="senha" name="senha">
+    <button type="submit"> Login </button>
+  </form>
   </body>
 </html>

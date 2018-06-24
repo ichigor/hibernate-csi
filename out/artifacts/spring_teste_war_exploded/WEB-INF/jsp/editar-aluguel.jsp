@@ -1,28 +1,27 @@
 <%--
   Created by IntelliJ IDEA.
   User: IgoR
-  Date: 14/06/2018
-  Time: 14:43
+  Date: 21/06/2018
+  Time: 14:48
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Lista de alugueis</title>
+    <title>Editar Aluguel</title>
 </head>
 <body>
 <a href="create-usuario.html">Cadastrar Usuario</a>
 <a href="cadastrar-carro.html">Cadastrar Carros</a>
-<a href="cadastrar-aluguel.html">Cadastrar Aluguel</a>
 <a href="lista-usuarios.html">Listar Usuarios</a>
 <a href="list-carros.html">Listar Carros</a>
-
-<c:forEach items="${alugueis}" var="alu">
-    <ul>
-        <li>${alu}</li>
-        <li><a href="delete-aluguel.html?id=${alu.id}">Deletar</a></li>
-        <li><a href="edit-aluguel.html?id=${alu.id}">Editar</a></li>
-    </ul>
-</c:forEach>
+<a href="list-alugueis.html">Listar Alugueis</a>
+<form action="create-aluguel.html" method="post">
+    <p>Data:</p>
+    <input type="date" name="data">
+    <p>Carro</p>
+    <input type="text" name="carro">
+    <button type="submit"> Cadastrar </button>
+</form>
 </body>
 </html>

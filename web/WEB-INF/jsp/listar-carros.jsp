@@ -12,7 +12,11 @@
     <title>Lista de carros</title>
 </head>
 <body>
+    <a href="create-usuario.html">Cadastrar Usuario</a>
     <a href="cadastrar-carro.html">Cadastrar Carros</a>
+    <a href="cadastrar-aluguel.html">Cadastrar Aluguel</a>
+    <a href="lista-usuarios.html">Listar Usuarios</a>
+    <a href="list-alugueis.html">Listar Alugueis</a>
     <c:forEach items="${carros}" var="car">
         <ul>
             <li>${car.marca}</li>

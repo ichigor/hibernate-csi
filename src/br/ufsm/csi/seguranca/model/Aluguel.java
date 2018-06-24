@@ -6,7 +6,8 @@ import java.util.Date;
 @Entity
 @Table(name = "ALUGUEL")
 public class Aluguel {
-    private int idAluguel;
+
+    private Long id;
     private Usuario usuario;
     private Carro carro;
     private Date data;
@@ -15,12 +16,12 @@ public class Aluguel {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_carro")
     @SequenceGenerator(name = "seq_carro", sequenceName = "seq_carro")
     @Column(name = "ID")
-    public int getIdAluguel() {
-        return idAluguel;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdAluguel(int idAluguel) {
-        this.idAluguel = idAluguel;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @ManyToOne

@@ -16,6 +16,7 @@ public class Usuario {
     private byte[] senha;
     private Collection<Log> logs;
     private Collection<Aluguel> alugueis;
+    private boolean tipo;
 
 
     @OneToMany(mappedBy = "usuario")
@@ -46,6 +47,15 @@ public class Usuario {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    @Column(name = "TIPO", length = 20)
+    public boolean isTipo() {
+        return tipo;
+    }
+
+    public void setTipo(boolean tipo) {
+        this.tipo = tipo;
     }
 
     @Column(name = "NOME", length = 100)
