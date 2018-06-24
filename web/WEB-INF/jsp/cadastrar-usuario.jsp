@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: IgoR
@@ -11,12 +12,6 @@
     <title>Cadastrar Usuario</title>
 </head>
 <body>
-    <a href="cadastrar-carro.html">Cadastrar Carros</a>
-    <a href="cadastrar-aluguel.html">Cadastrar Aluguel</a>
-    <a href="lista-usuarios.html">Listar Usuarios</a>
-    <a href="list-carros.html">Listar Carros</a>
-    <a href="list-alugueis.html">Listar Alugueis</a>
-    <%--<a href="list-carros.html">Listar Carros</a>--%>
     <form action="cria-usuario.html" method="post">
         <p>Nome:</p>
         <input type="text" name="nome">

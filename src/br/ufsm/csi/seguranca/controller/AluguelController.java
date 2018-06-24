@@ -20,7 +20,7 @@ public class AluguelController {
     private HibernateDAO hibernateDAO;
 
     @Transactional
-    @RequestMapping("create-aluguel.html")
+    @RequestMapping("create-aluguel.priv")
     public String criaAluguel(Aluguel aluguel) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         if(aluguel.getId() == null){
             hibernateDAO.criaObjeto(aluguel);
@@ -30,17 +30,17 @@ public class AluguelController {
             aluguelBanco.setCarro(aluguel.getCarro());
             aluguelBanco.setUsuario(aluguel.getUsuario());
         }
-        return "forward:list-alugueis.html";
+        return "forward:list-alugueis.priv";
     }
 
     @Transactional
-    @RequestMapping("cadastrar-aluguel.html")
+    @RequestMapping("cadastrar-aluguel.priv")
     public String cadastraAluguel() {
         return "cadastrar-aluguel";
     }
 
     @Transactional
-    @RequestMapping("list-alugueis.html")
+    @RequestMapping("list-alugueis.priv")
     public String listarAlugueis(Model model, String nome, String login) {
         Map<String, String> m = new HashMap<>();
         model.addAttribute("alugueis", hibernateDAO.listaObjetos(Aluguel.class, m, null, null, false));
@@ -48,14 +48,14 @@ public class AluguelController {
     }
 
     @Transactional
-    @RequestMapping("delete-aluguel.html")
+    @RequestMapping("delete-aluguel.priv")
     public String deletarAluguel(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Aluguel.class, id));
-        return "forward:list-alugueis.html";
+        return "forward:list-alugueis.priv";
     }
 
     @Transactional
-    @RequestMapping("edit-aluguel.html")
+    @RequestMapping("edit-aluguel.priv")
     public String editarAluguel(Long id, Model model) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         Aluguel aluguel = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
         model.addAttribute("aluguel", aluguel);

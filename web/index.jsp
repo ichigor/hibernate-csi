@@ -8,15 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Login</title>
   </head>
   <body>
+  <a href="list-carros.html">Listar Carros</a>
   <form action="login.html" method="post">
     <p>Login:</p>
-    <input type="login" name="login">
+    <input type="text" name="login">
     <p>Senha</p>
     <input type="password" name="senha">
     <button type="submit"> Login </button>
   </form>
+  <a href="create-usuario.html">Cadastrar-se</a>
   </body>
 </html>

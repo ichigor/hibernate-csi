@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: IgoR
@@ -11,12 +12,8 @@
     <title>Editar Aluguel</title>
 </head>
 <body>
-<a href="create-usuario.html">Cadastrar Usuario</a>
-<a href="cadastrar-carro.html">Cadastrar Carros</a>
-<a href="lista-usuarios.html">Listar Usuarios</a>
-<a href="list-carros.html">Listar Carros</a>
-<a href="list-alugueis.html">Listar Alugueis</a>
-<form action="create-aluguel.html" method="post">
+<c:import url="menu.jsp" />
+<form action="create-aluguel.priv" method="post">
     <p>Data:</p>
     <input type="date" name="data">
     <p>Carro</p>

@@ -7,43 +7,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01245a4e-6da3-4d6f-9558-e0cc25dfceed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-aluguel.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-usuario.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3bd75f18-fea9-4895-a9b0-22b5b5c4248a/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/3bd75f18-fea9-4895-a9b0-22b5b5c4248a/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3bd75f18-fea9-4895-a9b0-22b5b5c4248a/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/3bd75f18-fea9-4895-a9b0-22b5b5c4248a/_metadata_/metadata.values.at" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroAdm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/menu.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/AluguelController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/AluguelController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/CarroController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/CarroController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/UsuarioController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/UsuarioController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/model/Aluguel.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/model/Aluguel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/model/Usuario.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/model/Usuario.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/AluguelController.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/AluguelController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/CarroController.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/CarroController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/UsuarioController.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/UsuarioController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/model/Aluguel.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/model/Aluguel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/model/Usuario.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/model/Usuario.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/3bd75f18-fea9-4895-a9b0-22b5b5c4248a.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/3bd75f18-fea9-4895-a9b0-22b5b5c4248a.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-aluguel.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-aluguel.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-carro.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-carro.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-usuario.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-usuario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/editar-aluguel.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/editar-aluguel.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/editar-carro.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/editar-carro.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/editar-usuario.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/editar-usuario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/hello.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/hello.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/lista-usuarios.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/lista-usuarios.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/listar-alugueis.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/listar-alugueis.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/listar-carros.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/listar-carros.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/usuario.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/usuario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/AluguelController.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/AluguelController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/CarroController.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/CarroController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Aluguel.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Aluguel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Usuario.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Usuario.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-aluguel.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-aluguel.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-carro.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-carro.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-aluguel.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-aluguel.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-carro.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-carro.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-usuario.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-usuario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/hello.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/hello.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/lista-usuarios.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/lista-usuarios.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/listar-alugueis.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/listar-alugueis.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/listar-carros.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/listar-carros.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/usuario.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/usuario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -110,33 +115,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AluguelController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/AluguelController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <file leaf-file-name="menu.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/menu.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FiltroSeguranca.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="24" column="79" lean-forward="false" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
+              <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -145,8 +128,8 @@
       <file leaf-file-name="UsuarioController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="75" column="11" lean-forward="true" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+            <state relative-caret-position="508">
+              <caret line="134" column="29" lean-forward="true" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -157,8 +140,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="jsf" />
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -188,22 +171,28 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/editar-carro.xhtml" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Usuario.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/editar-alugueis.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/lista-usuarios.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-carro.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/listar-carros.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Aluguel.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-aluguel.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/usuario.jsp" />
+        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroAdm.java" />
+        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/AluguelController.java" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/CarroController.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/listar-carros.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-carro.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/editar-aluguel.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/editar-carro.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/editar-usuario.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/hello.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-aluguel.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/lista-usuarios.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/listar-alugueis.jsp" />
-        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/AluguelController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/menu.jsp" />
       </list>
     </option>
   </component>
@@ -520,12 +509,12 @@
       <workItem from="1529433295475" duration="4201000" />
       <workItem from="1529603089509" duration="4071000" />
       <workItem from="1529615860001" duration="3248000" />
-      <workItem from="1529860896696" duration="1141000" />
+      <workItem from="1529860896696" duration="10863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31440000" />
+    <option name="totallyTimeSpent" value="41162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -549,7 +538,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16612378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16612378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -607,34 +596,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/AluguelController.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/CarroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-carro.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/listar-carros.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -663,6 +629,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1078">
           <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -701,6 +670,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="e#1250#1251#0" expanded="false" />
+            <element signature="e#1282#1283#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -718,6 +691,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -773,6 +749,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -780,6 +757,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="73" column="18" lean-forward="false" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -795,38 +773,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/hello.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/usuario.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-carro.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#368#369#0" expanded="false" />
+            <element signature="e#398#399#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -834,14 +784,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="29" column="34" lean-forward="true" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/listar-carros.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -868,14 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -884,67 +821,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/CarroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="63" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="583">
           <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/editar-usuario.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Aluguel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="false" />
+            <element signature="e#1282#1283#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/editar-carro.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/lista-usuarios.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="69" lean-forward="true" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/listar-alugueis.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/editar-aluguel.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,48 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/AluguelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-aluguel.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="24" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="20" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="24" column="79" lean-forward="false" selection-start-line="24" selection-start-column="79" selection-end-line="24" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/dfef66b5/3bd75f18-fea9-4895-a9b0-22b5b5c4248a/baseTopicos.public.usuario">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1004,10 +846,179 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/usuario.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroAdm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="73" lean-forward="true" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/CarroController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-aluguel.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-carro.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/editar-aluguel.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="64" lean-forward="false" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/editar-carro.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="64" lean-forward="false" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/editar-usuario.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/hello.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/AluguelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-292">
+          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/listar-carros.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Aluguel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/lista-usuarios.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/listar-alugueis.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/menu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="75" column="11" lean-forward="true" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+        <state relative-caret-position="508">
+          <caret line="134" column="29" lean-forward="true" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
           <folding />
         </state>
       </provider>

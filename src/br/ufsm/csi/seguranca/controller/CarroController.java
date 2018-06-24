@@ -21,7 +21,7 @@ public class CarroController {
     private HibernateDAO hibernateDAO;
 
     @Transactional
-    @RequestMapping("create-carro.html")
+    @RequestMapping("create-carro.adm")
     public String cadastraCarro(Carro carro) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         if(carro.getId() == null) {
             hibernateDAO.criaObjeto(carro);
@@ -45,20 +45,20 @@ public class CarroController {
     }
 
     @Transactional
-    @RequestMapping("cadastrar-carro.html")
+    @RequestMapping("cadastrar-carro.adm")
     public String cadastraCarro() {
         return "cadastrar-carro";
     }
 
     @Transactional
-    @RequestMapping("delete-carro.html")
+    @RequestMapping("delete-carro.adm")
     public String deletarCarro(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Carro.class, id));
         return "forward:list-carros.html";
     }
 
     @Transactional
-    @RequestMapping("edit-carro.html")
+    @RequestMapping("edit-carro.adm")
     public String editarCarro(Long id, Model model) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         Carro carro = (Carro) hibernateDAO.carregaObjeto(Carro.class, id);
         model.addAttribute("carro", carro);

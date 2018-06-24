@@ -13,16 +13,12 @@
     <title>Lista de usuarios</title>
 </head>
 <body>
-<a href="create-usuario.html">Cadastrar Usuario</a>
-<a href="cadastrar-carro.html">Cadastrar Carros</a>
-<a href="cadastrar-aluguel.html">Cadastrar Aluguel</a>
-<a href="list-carros.html">Listar Carros</a>
-<a href="list-alugueis.html">Listar Alugueis</a>
+<c:import url="menu.jsp" />
 <c:forEach items="${usuarios}" var="u">
     <ul>
         <li>${u.nome} / ${u.login} / ${u.senha}</li>
-        <li><a href="delete-usuario.html?id=${u.id}">Deletar</a></li>
-        <li><a href="edit-usuario.html?id=${u.id}">Editar</a></li>
+        <li><a href="delete-usuario.adm?id=${u.id}">Deletar</a></li>
+        <li><a href="edit-usuario.adm?id=${u.id}">Editar</a></li>
     </ul>
     <%--<ul>--%>
         <%--<c:forEach items="${u.logs}" var="l" >--%>

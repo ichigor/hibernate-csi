@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: IgoR
@@ -11,17 +12,13 @@
     <title>Lista de alugueis</title>
 </head>
 <body>
-<a href="create-usuario.html">Cadastrar Usuario</a>
-<a href="cadastrar-carro.html">Cadastrar Carros</a>
-<a href="cadastrar-aluguel.html">Cadastrar Aluguel</a>
-<a href="lista-usuarios.html">Listar Usuarios</a>
-<a href="list-carros.html">Listar Carros</a>
+<c:import url="menu.jsp" />
 
 <c:forEach items="${alugueis}" var="alu">
     <ul>
-        <li>${alu}</li>
-        <li><a href="delete-aluguel.html?id=${alu.id}">Deletar</a></li>
-        <li><a href="edit-aluguel.html?id=${alu.id}">Editar</a></li>
+        <li>${alu.carro}</li>
+        <li><a href="delete-aluguel.priv?id=${alu.id}">Deletar</a></li>
+        <li><a href="edit-aluguel.priv?id=${alu.id}">Editar</a></li>
     </ul>
 </c:forEach>
 </body>

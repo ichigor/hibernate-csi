@@ -50,7 +50,7 @@ public class UsuarioController {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             usuarioBanco.setSenha(md.digest(senha.getBytes("ISO-8859-1")));
         }
-        return "forward:lista-usuarios.html";
+        return "forward:hello.html";
     }
 
     @Transactional
@@ -65,7 +65,7 @@ public class UsuarioController {
             model.addAttribute("logServidor", "acesso-negado");
             return "../../index";
         } else {
-            session.setAttribute("logado", usuarios.toArray()[0]);
+            session.setAttribute("usuario", usuarios.toArray()[0]);
             return "hello";
         }
 //        Usuario usuario = hibernateDAO.findUsuarioHQL(login, senha);
@@ -93,7 +93,7 @@ public class UsuarioController {
     }
 
     @Transactional
-    @RequestMapping("lista-usuarios.html")
+    @RequestMapping("lista-usuarios.adm")
     public String listaUsuarios(Model model, String nome, String login) {
         Map<String, String> m = new HashMap<>();
         //verificar talvez precise remover
@@ -114,18 +114,24 @@ public class UsuarioController {
     }
 
     @Transactional
-    @RequestMapping("delete-usuario.html")
+    @RequestMapping("delete-usuario.adm")
     public String deletarUsuario(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Usuario.class, id));
-        return "forward:lista-usuarios.html";
+        return "forward:lista-usuarios.adm";
     }
 
     @Transactional
-    @RequestMapping("edit-usuario.html")
+    @RequestMapping("edit-usuario.adm")
     public String editarUsuario(Long id, Model model) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         Usuario usuario = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, id);
         model.addAttribute("usuario", usuario);
         return "editar-usuario";
     }
 
+    @Transactional
+    @RequestMapping("logout.priv")
+    public String logout(HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        session.invalidate();
+        return "../../index";
+    }
 }

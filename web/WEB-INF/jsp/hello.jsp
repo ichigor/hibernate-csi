@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: cpol
@@ -11,8 +12,7 @@
     <title>Hello!</title>
 </head>
 <body>
-
-    <h1>Hello World!</h1>
+<c:import url="menu.jsp" />
 
 </body>
 </html>
