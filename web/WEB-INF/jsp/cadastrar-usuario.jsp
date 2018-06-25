@@ -21,5 +21,6 @@
         <input type="password" name="senha">
         <button type="submit"> Cadastrar </button>
     </form>
+    <a href="/spring-teste">Voltar</a>
 </body>
 </html>

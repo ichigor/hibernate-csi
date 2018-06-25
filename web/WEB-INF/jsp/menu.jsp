@@ -12,7 +12,7 @@
 </head>
 <body>
 <a href="cadastrar-carro.adm">Cadastrar Carros</a>
-<a href="cadastrar-aluguel.priv">Cadastrar Aluguel</a>
+<%--<a href="cadastrar-aluguel.priv">Cadastrar Aluguel</a>--%>
 <a href="lista-usuarios.adm">Listar Usuarios</a>
 <a href="list-carros.html">Listar Carros</a>
 <a href="list-alugueis.priv">Listar Alugueis</a>

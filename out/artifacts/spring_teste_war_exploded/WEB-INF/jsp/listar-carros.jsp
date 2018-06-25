@@ -18,6 +18,7 @@
             <li>${car.marca}</li>
             <li><a href="delete-carro.adm?id=${car.id}">Deletar</a></li>
             <li><a href="edit-carro.adm?id=${car.id}">Editar</a></li>
+            <li><a href="create-aluguel.priv?id=${car.id}">Alugar</a></li>
         </ul>
     </c:forEach>
 

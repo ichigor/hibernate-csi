@@ -17,7 +17,7 @@
         <p>Data:</p>
         <input type="date" name="data">
         <p>Carro</p>
-        <input type="text" name="carro">
+        <input type="text" name="carro" value = "">
         <button type="submit"> Cadastrar </button>
     </form>
 </body>

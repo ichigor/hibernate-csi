@@ -13,6 +13,6 @@
 </head>
 <body>
 <c:import url="menu.jsp" />
-
+<h1>Bem vindo!</h1>
 </body>
 </html>
