@@ -53,7 +53,7 @@ public class AluguelController {
         car.setAlugueis(aluguelCarro);
         car.setAlugado(true);
 
-        return "forward:list-alugueis.priv";
+        return "forward:list-alugueis-user.priv";
     }
 
     @Transactional
@@ -84,11 +84,22 @@ public class AluguelController {
     }
 
     @Transactional
-    @RequestMapping("list-alugueis.priv")
+    @RequestMapping("list-alugueis.adm")
     public String listarAlugueis(Model model, String nome, String login) {
         Map<String, String> m = new HashMap<>();
         model.addAttribute("alugueis", hibernateDAO.listaObjetos(Aluguel.class, m, null, null, false));
         return "listar-alugueis";
+    }
+
+    @Transactional
+    @RequestMapping("list-alugueis-user.priv")
+    public String listarAlugueisUsuario(Model model, String nome, String login, HttpSession session) {
+        Usuario userSessao = (Usuario) session.getAttribute("usuario");
+        Long idUsuarioSessao = userSessao.getId();
+        Usuario userBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, idUsuarioSessao);
+//        model.addAttribute("alugueis", hibernateDAO.listaObjetos(Aluguel.class, m, null, null, false));
+        model.addAttribute("usuario", userBanco);
+        return "listar-alugueis-usuario";
     }
 
     @Transactional
@@ -99,7 +110,7 @@ public class AluguelController {
         Carro carroBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, carroId);
         carroBanco.setAlugado(false);
         hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Aluguel.class, id));
-        return "forward:list-alugueis.priv";
+        return "forward:list-alugueis-user.priv";
     }
 
     @Transactional

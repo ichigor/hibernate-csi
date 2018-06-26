@@ -15,7 +15,8 @@
 <%--<a href="cadastrar-aluguel.priv">Cadastrar Aluguel</a>--%>
 <a href="lista-usuarios.adm">Listar Usuarios</a>
 <a href="list-carros.html">Listar Carros</a>
-<a href="list-alugueis.priv">Listar Alugueis</a>
+<a href="list-alugueis-user.priv">Listar seus Alugueis</a>
+<a href="list-alugueis.adm">Listar Todos os Alugueis</a>
 <a href="logout.priv">Logout</a>
 </body>
 </html>
