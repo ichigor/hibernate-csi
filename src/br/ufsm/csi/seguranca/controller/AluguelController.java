@@ -58,23 +58,33 @@ public class AluguelController {
 
     @Transactional
     @RequestMapping("editar-aluguel.priv")
-    public String editaAluguel(Aluguel aluguel, Long id, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-//        Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, aluguel.getId());
-//        aluguelBanco.setId(aluguel.getId());
-//        aluguelBanco.setCarro(aluguel.getCarro());
-//        aluguelBanco.setUsuario(aluguel.getUsuario());
-//
-//        Carro carBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, id);
-//
-//        aluguel.setCarro(carBanco);
-//        Collection aluguelCarro = carBanco.getAlugueis();
-//
-//        aluguelCarro.add(aluguel);
-//
-//
-//        car.setAlugueis(aluguelCarro);
+    public String editaAluguel(Aluguel aluguel, Long id, HttpSession session, Model model, Long carroId) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
 
-        return "forward:list-alugueis.priv";
+        Long idCarro = aluguelBanco.getCarro().getId();
+        Carro carroVelho = (Carro) hibernateDAO.carregaObjeto(Carro.class, idCarro);
+        carroVelho.setAlugado(false);
+
+        Carro carroBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, carroId);
+        aluguelBanco.setCarro(carroBanco);
+
+        Usuario user = (Usuario) session.getAttribute("usuario");
+        aluguel.setUsuario(user);
+        aluguel.setCarro(carroBanco);
+        Date data = new Date();
+        aluguel.setData(data);
+
+        Collection aluguelUsuario = user.getAlugueis();
+        Collection aluguelCarro = carroBanco.getAlugueis();
+
+        aluguelUsuario.add(aluguel);
+        aluguelCarro.add(aluguel);
+
+        user.setAlugueis(aluguelUsuario);
+        carroBanco.setAlugueis(aluguelCarro);
+        carroBanco.setAlugado(true);
+
+        return "forward:list-alugueis-user.priv";
     }
 
     @Transactional
@@ -116,8 +126,8 @@ public class AluguelController {
     @Transactional
     @RequestMapping("edit-aluguel.priv")
     public String editarAluguel(Long id, Model model) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-//        Aluguel aluguel = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
-//        model.addAttribute("aluguel", aluguel);
+        Aluguel aluguel = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
+        model.addAttribute("aluguel", aluguel);
         Map<String, String> m = new HashMap<>();
         model.addAttribute("carros", hibernateDAO.listaObjetos(Carro.class, m, null, null, false));
         return "editar-aluguel";

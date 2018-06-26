@@ -18,7 +18,7 @@
     <ul>
         <li>${user.carro.marca}</li>
         <li><a href="delete-aluguel.priv?id=${user.id}">Deletar</a></li>
-        <li><a href="editar-aluguel.priv?id=${user.id}">Editar</a></li>
+        <li><a href="edit-aluguel.priv?id=${user.id}">Editar</a></li>
     </ul>
 </c:forEach>
 </body>
