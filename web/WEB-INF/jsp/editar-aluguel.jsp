@@ -13,12 +13,11 @@
 </head>
 <body>
 <c:import url="menu.jsp" />
-<form action="create-aluguel.priv" method="post">
-    <p>Data:</p>
-    <input type="date" name="data">
-    <p>Carro</p>
-    <input type="text" name="carro">
-    <button type="submit"> Cadastrar </button>
-</form>
+<c:forEach items="${carros}" var="car">
+    <ul>
+        <li>${car.marca}</li>
+        <li><a href="create-aluguel.priv?id=${car.id}">Alugar</a></li>
+    </ul>
+</c:forEach>
 </body>
 </html>

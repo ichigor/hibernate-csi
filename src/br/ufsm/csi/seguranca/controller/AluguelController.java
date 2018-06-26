@@ -51,6 +51,28 @@ public class AluguelController {
 
         user.setAlugueis(aluguelUsuario);
         car.setAlugueis(aluguelCarro);
+        car.setAlugado(true);
+
+        return "forward:list-alugueis.priv";
+    }
+
+    @Transactional
+    @RequestMapping("editar-aluguel.priv")
+    public String editaAluguel(Aluguel aluguel, Long id, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+//        Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, aluguel.getId());
+//        aluguelBanco.setId(aluguel.getId());
+//        aluguelBanco.setCarro(aluguel.getCarro());
+//        aluguelBanco.setUsuario(aluguel.getUsuario());
+//
+//        Carro carBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, id);
+//
+//        aluguel.setCarro(carBanco);
+//        Collection aluguelCarro = carBanco.getAlugueis();
+//
+//        aluguelCarro.add(aluguel);
+//
+//
+//        car.setAlugueis(aluguelCarro);
 
         return "forward:list-alugueis.priv";
     }
@@ -72,6 +94,10 @@ public class AluguelController {
     @Transactional
     @RequestMapping("delete-aluguel.priv")
     public String deletarAluguel(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
+        Long carroId = aluguelBanco.getCarro().getId();
+        Carro carroBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, carroId);
+        carroBanco.setAlugado(false);
         hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Aluguel.class, id));
         return "forward:list-alugueis.priv";
     }
@@ -79,8 +105,10 @@ public class AluguelController {
     @Transactional
     @RequestMapping("edit-aluguel.priv")
     public String editarAluguel(Long id, Model model) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        Aluguel aluguel = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
-        model.addAttribute("aluguel", aluguel);
+//        Aluguel aluguel = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
+//        model.addAttribute("aluguel", aluguel);
+        Map<String, String> m = new HashMap<>();
+        model.addAttribute("carros", hibernateDAO.listaObjetos(Carro.class, m, null, null, false));
         return "editar-aluguel";
     }
 }

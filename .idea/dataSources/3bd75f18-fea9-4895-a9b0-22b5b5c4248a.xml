@@ -12,8 +12,8 @@
     </database>
     <schema id="4" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-06-21.15:31:58.755</IntrospectionTimestamp>
-      <IntrospectionStateNumber>981</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-06-26.17:19:13.373</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1196</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -33,81 +33,81 @@
       <ObjectId>11480</ObjectId>
     </schema>
     <sequence id="10" parent="4" name="seq_carro">
-      <ObjectId>16730</ObjectId>
-      <StateNumber>976</StateNumber>
+      <ObjectId>16852</ObjectId>
+      <StateNumber>1186</StateNumber>
       <SequenceIdentity>1+50</SequenceIdentity>
     </sequence>
     <sequence id="11" parent="4" name="seq_log">
-      <ObjectId>16732</ObjectId>
-      <StateNumber>977</StateNumber>
+      <ObjectId>16854</ObjectId>
+      <StateNumber>1187</StateNumber>
       <SequenceIdentity>1+50</SequenceIdentity>
     </sequence>
     <sequence id="12" parent="4" name="seq_usuario">
-      <ObjectId>16734</ObjectId>
-      <StateNumber>978</StateNumber>
+      <ObjectId>16856</ObjectId>
+      <StateNumber>1188</StateNumber>
       <SequenceIdentity>1+50</SequenceIdentity>
     </sequence>
     <table id="13" parent="4" name="aluguel">
-      <ObjectId>16702</ObjectId>
-      <StateNumber>980</StateNumber>
+      <ObjectId>16858</ObjectId>
+      <StateNumber>1195</StateNumber>
     </table>
     <table id="14" parent="4" name="carro">
-      <ObjectId>16707</ObjectId>
-      <StateNumber>979</StateNumber>
+      <ObjectId>16863</ObjectId>
+      <StateNumber>1194</StateNumber>
     </table>
     <table id="15" parent="4" name="log">
-      <ObjectId>16715</ObjectId>
-      <StateNumber>981</StateNumber>
+      <ObjectId>16871</ObjectId>
+      <StateNumber>1196</StateNumber>
     </table>
     <table id="16" parent="4" name="usuario">
-      <ObjectId>16720</ObjectId>
-      <StateNumber>981</StateNumber>
+      <ObjectId>16879</ObjectId>
+      <StateNumber>1196</StateNumber>
     </table>
     <column id="17" parent="13" name="id">
       <Position>1</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>971</StateNumber>
+      <StateNumber>1189</StateNumber>
     </column>
     <column id="18" parent="13" name="data">
       <Position>2</Position>
       <DataType>timestamp|0</DataType>
-      <StateNumber>971</StateNumber>
+      <StateNumber>1189</StateNumber>
     </column>
     <column id="19" parent="13" name="carro">
       <Position>3</Position>
       <DataType>bigint|0</DataType>
-      <StateNumber>971</StateNumber>
+      <StateNumber>1189</StateNumber>
     </column>
     <column id="20" parent="13" name="usuario">
       <Position>4</Position>
       <DataType>bigint|0</DataType>
-      <StateNumber>971</StateNumber>
+      <StateNumber>1189</StateNumber>
     </column>
     <index id="21" parent="13" name="aluguel_pkey">
-      <ObjectId>16705</ObjectId>
+      <ObjectId>16861</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="22" parent="13" name="aluguel_pkey">
-      <ObjectId>16706</ObjectId>
+      <ObjectId>16862</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>aluguel_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
     <foreign-key id="23" parent="13" name="fk9r55flois44muvftmva5jewl4">
-      <ObjectId>16736</ObjectId>
+      <ObjectId>16889</ObjectId>
       <ColNames>carro</ColNames>
-      <RefTableId>16707</RefTableId>
+      <RefTableId>16863</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>carro</RefTableName>
       <RefKeyName>carro_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <foreign-key id="24" parent="13" name="fkqpu5dlak4yu0dn9xhqpcvi9rc">
-      <ObjectId>16741</ObjectId>
+      <ObjectId>16894</ObjectId>
       <ColNames>usuario</ColNames>
-      <RefTableId>16720</RefTableId>
+      <RefTableId>16879</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
@@ -117,35 +117,35 @@
       <Position>1</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>972</StateNumber>
+      <StateNumber>1190</StateNumber>
     </column>
     <column id="26" parent="14" name="alugado">
       <Position>2</Position>
       <DataType>boolean|0</DataType>
-      <StateNumber>972</StateNumber>
+      <StateNumber>1190</StateNumber>
     </column>
     <column id="27" parent="14" name="ano">
       <Position>3</Position>
       <DataType>bigint|0</DataType>
-      <StateNumber>972</StateNumber>
+      <StateNumber>1190</StateNumber>
     </column>
     <column id="28" parent="14" name="marca">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>972</StateNumber>
+      <StateNumber>1190</StateNumber>
     </column>
     <column id="29" parent="14" name="placa">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>972</StateNumber>
+      <StateNumber>1190</StateNumber>
     </column>
     <index id="30" parent="14" name="carro_pkey">
-      <ObjectId>16713</ObjectId>
+      <ObjectId>16869</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="31" parent="14" name="carro_pkey">
-      <ObjectId>16714</ObjectId>
+      <ObjectId>16870</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>carro_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
@@ -154,92 +154,97 @@
       <Position>1</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>973</StateNumber>
+      <StateNumber>1191</StateNumber>
     </column>
     <column id="33" parent="15" name="classe">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
-      <StateNumber>973</StateNumber>
+      <StateNumber>1191</StateNumber>
     </column>
     <column id="34" parent="15" name="data_hora">
       <Position>3</Position>
       <DataType>timestamp|0</DataType>
-      <StateNumber>973</StateNumber>
+      <StateNumber>1191</StateNumber>
     </column>
     <column id="35" parent="15" name="id_objeto">
       <Position>4</Position>
       <DataType>bigint|0</DataType>
-      <StateNumber>973</StateNumber>
+      <StateNumber>1191</StateNumber>
     </column>
-    <column id="36" parent="15" name="id_usuario">
+    <column id="36" parent="15" name="operacao">
       <Position>5</Position>
-      <DataType>bigint|0</DataType>
-      <StateNumber>973</StateNumber>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1191</StateNumber>
     </column>
-    <index id="37" parent="15" name="log_pkey">
-      <ObjectId>16718</ObjectId>
+    <column id="37" parent="15" name="id_usuario">
+      <Position>6</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1191</StateNumber>
+    </column>
+    <index id="38" parent="15" name="log_pkey">
+      <ObjectId>16877</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="38" parent="15" name="log_pkey">
-      <ObjectId>16719</ObjectId>
+    <key id="39" parent="15" name="log_pkey">
+      <ObjectId>16878</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>log_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="39" parent="15" name="fkeomueumqj28g4u26kh6pgnq3h">
-      <ObjectId>16746</ObjectId>
+    <foreign-key id="40" parent="15" name="fkeomueumqj28g4u26kh6pgnq3h">
+      <ObjectId>16899</ObjectId>
       <ColNames>id_usuario</ColNames>
-      <RefTableId>16720</RefTableId>
+      <RefTableId>16879</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>usuario</RefTableName>
       <RefKeyName>usuario_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="40" parent="16" name="id">
+    <column id="41" parent="16" name="id">
       <Position>1</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>974</StateNumber>
+      <StateNumber>1192</StateNumber>
     </column>
-    <column id="41" parent="16" name="login">
+    <column id="42" parent="16" name="login">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
-      <StateNumber>974</StateNumber>
+      <StateNumber>1192</StateNumber>
     </column>
-    <column id="42" parent="16" name="nome">
+    <column id="43" parent="16" name="nome">
       <Position>3</Position>
       <DataType>varchar(100)|0</DataType>
-      <StateNumber>974</StateNumber>
+      <StateNumber>1192</StateNumber>
     </column>
-    <column id="43" parent="16" name="senha">
+    <column id="44" parent="16" name="senha">
       <Position>4</Position>
       <DataType>bytea|0</DataType>
-      <StateNumber>974</StateNumber>
+      <StateNumber>1192</StateNumber>
     </column>
-    <column id="44" parent="16" name="tipo">
+    <column id="45" parent="16" name="tipo">
       <Position>5</Position>
       <DataType>boolean|0</DataType>
-      <StateNumber>974</StateNumber>
+      <StateNumber>1192</StateNumber>
     </column>
-    <index id="45" parent="16" name="usuario_pkey">
-      <ObjectId>16726</ObjectId>
+    <index id="46" parent="16" name="usuario_pkey">
+      <ObjectId>16885</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="46" parent="16" name="uk_fphwr1jyq6n2kyosqsarim7um">
-      <ObjectId>16728</ObjectId>
+    <index id="47" parent="16" name="uk_fphwr1jyq6n2kyosqsarim7um">
+      <ObjectId>16887</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="47" parent="16" name="usuario_pkey">
-      <ObjectId>16727</ObjectId>
+    <key id="48" parent="16" name="usuario_pkey">
+      <ObjectId>16886</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>usuario_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="48" parent="16" name="uk_fphwr1jyq6n2kyosqsarim7um">
-      <ObjectId>16729</ObjectId>
+    <key id="49" parent="16" name="uk_fphwr1jyq6n2kyosqsarim7um">
+      <ObjectId>16888</ObjectId>
       <ColNames>login</ColNames>
       <UnderlyingIndexName>uk_fphwr1jyq6n2kyosqsarim7um</UnderlyingIndexName>
     </key>

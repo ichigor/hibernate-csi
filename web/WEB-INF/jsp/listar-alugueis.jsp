@@ -17,8 +17,9 @@
 <c:forEach items="${alugueis}" var="alu">
     <ul>
         <li>${alu.carro.marca}</li>
+        <li>${alu.usuario.nome}</li>
         <li><a href="delete-aluguel.priv?id=${alu.id}">Deletar</a></li>
-        <li><a href="edit-aluguel.priv?id=${alu.id}">Editar</a></li>
+        <li><a href="editar-aluguel.priv?id=${alu.id}">Editar</a></li>
     </ul>
 </c:forEach>
 </body>

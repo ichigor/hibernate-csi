@@ -15,6 +15,7 @@ public class Log {
     private Long idObjeto;
     private Usuario usuario;
     private Date dataHora;
+    private String operacao;
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_log")
@@ -63,5 +64,14 @@ public class Log {
 
     public void setDataHora(Date dataHora) {
         this.dataHora = dataHora;
+    }
+
+    @Column(name = "OPERACAO")
+    public String getOperacao() {
+        return operacao;
+    }
+
+    public void setOperacao(String operacao) {
+        this.operacao = operacao;
     }
 }

@@ -53,7 +53,11 @@ public class CarroController {
     @Transactional
     @RequestMapping("delete-carro.adm")
     public String deletarCarro(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Carro.class, id));
+        try {
+            hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Carro.class, id));
+        } catch (Exception e) {
+            //adicionar algo que nao pode remover caso tenha algum relacionamento
+        }
         return "forward:list-carros.html";
     }
 

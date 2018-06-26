@@ -50,7 +50,7 @@ public class UsuarioController {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             usuarioBanco.setSenha(md.digest(senha.getBytes("ISO-8859-1")));
         }
-        return "forward:hello.html";
+        return "../../index";
     }
 
     @Transactional
@@ -116,7 +116,11 @@ public class UsuarioController {
     @Transactional
     @RequestMapping("delete-usuario.adm")
     public String deletarUsuario(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Usuario.class, id));
+        try {
+            hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Usuario.class, id));
+        } catch (Exception e) {
+            //adicionar algo que nao pode remover caso tenha algum relacionamento
+        }
         return "forward:lista-usuarios.adm";
     }
 

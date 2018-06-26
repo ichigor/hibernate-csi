@@ -13,14 +13,26 @@
 </head>
 <body>
 <c:import url="menu.jsp" />
+    <p>Disponiveis</p>
     <c:forEach items="${carros}" var="car">
-        <ul>
-            <li>${car.marca}</li>
-            <li><a href="delete-carro.adm?id=${car.id}">Deletar</a></li>
-            <li><a href="edit-carro.adm?id=${car.id}">Editar</a></li>
-            <li><a href="create-aluguel.priv?id=${car.id}">Alugar</a></li>
-        </ul>
+        <c:if test="${car.alugado != true}" >
+            <ul>
+                <li>${car.marca}</li>
+                <li><a href="delete-carro.adm?id=${car.id}">Deletar</a></li>
+                <li><a href="edit-carro.adm?id=${car.id}">Editar</a></li>
+                <li><a href="create-aluguel.priv?id=${car.id}">Alugar</a></li>
+            </ul>
+        </c:if>
     </c:forEach>
-
+    <p>Alugados</p>
+    <c:forEach items="${carros}" var="car">
+        <c:if test="${car.alugado == true}" >
+            <ul>
+                <li>${car.marca}</li>
+                <li><a href="delete-carro.adm?id=${car.id}">Deletar</a></li>
+                <li><a href="edit-carro.adm?id=${car.id}">Editar</a></li>
+            </ul>
+        </c:if>
+    </c:forEach>
 </body>
 </html>
