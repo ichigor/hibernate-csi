@@ -36,11 +36,15 @@ public class UsuarioController {
 
     @Transactional
     @RequestMapping("cria-usuario.html")
-    public String criaUsuario(Usuario usuario, String senha) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public String criaUsuario(Usuario usuario, String senha, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException, ClassNotFoundException {
         if(usuario.getId() == null) {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             usuario.setSenha(md.digest(senha.getBytes("ISO-8859-1")));
             hibernateDAO.criaObjeto(usuario);
+//            Usuario user = (Usuario) session.getAttribute("usuario");
+            Date date = new Date();
+            hibernateDAO.criaLog(usuario, usuario.getId(), "create", Usuario.class, date);
+            return "../../index";
         } else {
             Usuario usuarioBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, usuario.getId());
             usuarioBanco.setId(usuario.getId());
@@ -49,13 +53,18 @@ public class UsuarioController {
             usuarioBanco.setLogin(usuario.getLogin());
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             usuarioBanco.setSenha(md.digest(senha.getBytes("ISO-8859-1")));
+
+            Usuario user = (Usuario) session.getAttribute("usuario");
+            Date date = new Date();
+            hibernateDAO.criaLog(user, usuarioBanco.getId(), "update", Usuario.class, date);
+            return "forward:lista-usuarios.adm";
         }
-        return "../../index";
+
     }
 
     @Transactional
     @RequestMapping("login.html")
-    public String login(String login, String senha, HttpSession session, Model model) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+    public String login(String login, String senha, HttpSession session, Model model, HttpServletRequest request) throws UnsupportedEncodingException, NoSuchAlgorithmException {
         Map<String, Object> map = new HashMap<>();
         map.put("login", login);
         MessageDigest md = MessageDigest.getInstance("SHA-256");
@@ -65,7 +74,9 @@ public class UsuarioController {
             model.addAttribute("logServidor", "acesso-negado");
             return "../../index";
         } else {
-            session.setAttribute("usuario", usuarios.toArray()[0]);
+            session.invalidate();
+            HttpSession newSession = request.getSession();
+            newSession.setAttribute("usuario", usuarios.toArray()[0]);
             return "hello";
         }
 //        Usuario usuario = hibernateDAO.findUsuarioHQL(login, senha);
@@ -94,7 +105,7 @@ public class UsuarioController {
 
     @Transactional
     @RequestMapping("lista-usuarios.adm")
-    public String listaUsuarios(Model model, String nome, String login) {
+    public String listaUsuarios(Model model, String nome, String login, HttpSession session) throws ClassNotFoundException {
         Map<String, String> m = new HashMap<>();
         //verificar talvez precise remover
 //        if (nome != null && !nome.isEmpty()) {
@@ -104,6 +115,9 @@ public class UsuarioController {
 //            m.put("login", login);
 //        }
         model.addAttribute("usuarios", hibernateDAO.listaObjetos(Usuario.class, m, null, null, false));
+        Usuario user = (Usuario) session.getAttribute("usuario");
+        Date date = new Date();
+        hibernateDAO.criaLog(user, user.getId(), "read", Usuario.class, date);
         return "lista-usuarios";
     }
 
@@ -115,8 +129,11 @@ public class UsuarioController {
 
     @Transactional
     @RequestMapping("delete-usuario.adm")
-    public String deletarUsuario(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public String deletarUsuario(Long id, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         try {
+            Usuario user = (Usuario) session.getAttribute("usuario");
+            Date date = new Date();
+            hibernateDAO.criaLog(user, id, "delete", Usuario.class, date);
             hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Usuario.class, id));
         } catch (Exception e) {
             //adicionar algo que nao pode remover caso tenha algum relacionamento

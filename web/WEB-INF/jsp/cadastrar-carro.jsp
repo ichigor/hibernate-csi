@@ -14,6 +14,7 @@
     <body>
     <c:import url="menu.jsp" />
         <form action="create-carro.adm" method="post">
+            <input type="hidden" value="${token}" name="token" />
             <p>Marca:</p>
             <input type="text" name="marca">
             <p>Ano</p>

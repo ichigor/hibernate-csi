@@ -59,31 +59,31 @@ public class AluguelController {
     @Transactional
     @RequestMapping("editar-aluguel.priv")
     public String editaAluguel(Aluguel aluguel, Long id, HttpSession session, Model model, Long carroId) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
+        Long idAluguel = (Long) session.getAttribute("idAluguel");
 
-        Long idCarro = aluguelBanco.getCarro().getId();
-        Carro carroVelho = (Carro) hibernateDAO.carregaObjeto(Carro.class, idCarro);
-        carroVelho.setAlugado(false);
+        if(id.equals(idAluguel)){
+            System.out.println("mesmo id de aluguel");
+            Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
+            Usuario usuarioSession = (Usuario) session.getAttribute("usuario");
+            Usuario usuarioBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, usuarioSession.getId());
+            if(aluguelBanco.getUsuario().getId().equals(usuarioBanco.getId())){
 
-        Carro carroBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, carroId);
-        aluguelBanco.setCarro(carroBanco);
+                //feito para mudar o boolean de alugado
+                Long idCarroVelho = aluguelBanco.getCarro().getId();
+                Carro carroVelho = (Carro) hibernateDAO.carregaObjeto(Carro.class, idCarroVelho);
+                carroVelho.setAlugado(false);
 
-        Usuario user = (Usuario) session.getAttribute("usuario");
-        aluguel.setUsuario(user);
-        aluguel.setCarro(carroBanco);
-        Date data = new Date();
-        aluguel.setData(data);
+                Carro carroNovo = (Carro) hibernateDAO.carregaObjeto(Carro.class, carroId);
+                aluguelBanco.setCarro(carroNovo);
+                Date data = new Date();
+                aluguelBanco.setData(data);
+//                aluguel.setCarro(carroNovo);
+//                aluguel.setData(data);
 
-        Collection aluguelUsuario = user.getAlugueis();
-        Collection aluguelCarro = carroBanco.getAlugueis();
-
-        aluguelUsuario.add(aluguel);
-        aluguelCarro.add(aluguel);
-
-        user.setAlugueis(aluguelUsuario);
-        carroBanco.setAlugueis(aluguelCarro);
-        carroBanco.setAlugado(true);
-
+                carroNovo.setAlugado(true);
+                hibernateDAO.updateObjeto(aluguelBanco);
+            }
+        }
         return "forward:list-alugueis-user.priv";
     }
 
@@ -125,11 +125,12 @@ public class AluguelController {
 
     @Transactional
     @RequestMapping("edit-aluguel.priv")
-    public String editarAluguel(Long id, Model model) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public String editarAluguel(Long id, Model model, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         Aluguel aluguel = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
         model.addAttribute("aluguel", aluguel);
         Map<String, String> m = new HashMap<>();
         model.addAttribute("carros", hibernateDAO.listaObjetos(Carro.class, m, null, null, false));
+        session.setAttribute("idAluguel", id);
         return "editar-aluguel";
     }
 }
