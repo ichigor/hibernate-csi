@@ -27,4 +27,8 @@
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.adm</url-pattern>
     </servlet-mapping>
+    <context-param>
+        <param-name>defaultHtmlEscape</param-name>
+        <param-value>true</param-value>
+    </context-param>
 </web-app>

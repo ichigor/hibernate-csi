@@ -17,7 +17,7 @@
     <c:forEach items="${carros}" var="car">
         <c:if test="${car.alugado != true}" >
             <ul>
-                <li>${car.marca}</li>
+                <li><c:out value="${car.marca}" /></li>
                 <li><a href="delete-carro.adm?id=${car.id}">Deletar</a></li>
                 <li><a href="edit-carro.adm?id=${car.id}">Editar</a></li>
                 <li><a href="create-aluguel.priv?id=${car.id}">Alugar</a></li>
@@ -28,7 +28,7 @@
     <c:forEach items="${carros}" var="car">
         <c:if test="${car.alugado == true}" >
             <ul>
-                <li>${car.marca}</li>
+                <li><c:out value="${car.marca}" /></li>
                 <li><a href="delete-carro.adm?id=${car.id}">Deletar</a></li>
                 <li><a href="edit-carro.adm?id=${car.id}">Editar</a></li>
             </ul>
