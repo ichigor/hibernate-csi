@@ -14,5 +14,6 @@
 <body>
 <c:import url="menu.jsp" />
 <h1>Bem vindo!</h1>
+<p>${erro}</p>
 </body>
 </html>

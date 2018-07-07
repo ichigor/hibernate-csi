@@ -18,7 +18,7 @@
     <select name="carroId">
         <c:forEach items="${carros}" var="car">
             <c:if test="${car.alugado != true}" >
-                <option value="${car.id}">${car.marca}</option>
+                <option value="${car.id}"><c:out value="${car.marca}" /></option>
             </c:if>
         </c:forEach>
     </select>

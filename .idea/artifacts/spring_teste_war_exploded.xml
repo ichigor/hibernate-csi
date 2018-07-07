@@ -17,6 +17,7 @@
           <element id="library" level="project" name="org.owasp.encoder:encoder-esapi:1.2.1" />
           <element id="library" level="project" name="postgresql-9.3-1104-jdbc41" />
           <element id="library" level="project" name="javax.servlet:javax.servlet-api:3.0.1" />
+          <element id="library" level="project" name="org.glassfish:javax.json:1.1.2" />
         </element>
       </element>
     </root>

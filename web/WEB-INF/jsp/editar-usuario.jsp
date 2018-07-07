@@ -17,9 +17,9 @@
 <form action="cria-usuario.html" method="post">
     <input type="hidden" name ="id" value="${usuario.id}" />
     <p>Nome:</p>
-    <input type="text" name="nome" value="${usuario.nome}">
+    <input type="text" name="nome" value="<c:out value="${usuario.nome}" />">
     <p>Login:</p>
-    <input type="text" name="login" value="${usuario.login}">
+    <input type="text" name="login" value="<c:out value="${usuario.login}" />">
     <p>Senha:</p>
     <input type="password" name="senha">
     <button type="submit"> Editar </button>

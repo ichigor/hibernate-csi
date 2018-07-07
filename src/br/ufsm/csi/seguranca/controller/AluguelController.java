@@ -26,15 +26,8 @@ public class AluguelController {
 
     @Transactional
     @RequestMapping("create-aluguel.priv")
-    public String criaAluguel(Aluguel aluguel, Long id, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-//        if(aluguel.getId() == null){
-//            hibernateDAO.criaObjeto(aluguel);
-//        } else {
-//            Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, aluguel.getId());
-//            aluguelBanco.setId(aluguel.getId());
-//            aluguelBanco.setCarro(aluguel.getCarro());
-//            aluguelBanco.setUsuario(aluguel.getUsuario());
-//        }
+    public String criaAluguel(Aluguel aluguel, Long id, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException, ClassNotFoundException {
+
         Usuario user = (Usuario) session.getAttribute("usuario");
         Carro car = (Carro) hibernateDAO.carregaObjeto(Carro.class, id);
         hibernateDAO.criaObjeto(aluguel);
@@ -53,16 +46,18 @@ public class AluguelController {
         car.setAlugueis(aluguelCarro);
         car.setAlugado(true);
 
+        Date date = new Date();
+        hibernateDAO.criaLog(user, aluguel.getId(), "create", Aluguel.class, date);
+
         return "forward:list-alugueis-user.priv";
     }
 
     @Transactional
     @RequestMapping("editar-aluguel.priv")
-    public String editaAluguel(Aluguel aluguel, Long id, HttpSession session, Model model, Long carroId) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public String editaAluguel(Aluguel aluguel, Long id, HttpSession session, Model model, Long carroId) throws NoSuchAlgorithmException, UnsupportedEncodingException, ClassNotFoundException {
         Long idAluguel = (Long) session.getAttribute("idAluguel");
 
         if(id.equals(idAluguel)){
-            System.out.println("mesmo id de aluguel");
             Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
             Usuario usuarioSession = (Usuario) session.getAttribute("usuario");
             Usuario usuarioBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, usuarioSession.getId());
@@ -77,50 +72,56 @@ public class AluguelController {
                 aluguelBanco.setCarro(carroNovo);
                 Date data = new Date();
                 aluguelBanco.setData(data);
-//                aluguel.setCarro(carroNovo);
-//                aluguel.setData(data);
 
                 carroNovo.setAlugado(true);
                 hibernateDAO.updateObjeto(aluguelBanco);
+                Date date = new Date();
+                hibernateDAO.criaLog(usuarioSession, aluguelBanco.getId(), "update", Aluguel.class, date);
             }
         }
         return "forward:list-alugueis-user.priv";
     }
 
     @Transactional
-    @RequestMapping("cadastrar-aluguel.priv")
-    public String cadastraAluguel() {
-        return "cadastrar-aluguel";
-    }
-
-    @Transactional
-    @RequestMapping("list-alugueis.adm")
-    public String listarAlugueis(Model model, String nome, String login) {
-        Map<String, String> m = new HashMap<>();
-        model.addAttribute("alugueis", hibernateDAO.listaObjetos(Aluguel.class, m, null, null, false));
-        return "listar-alugueis";
-    }
-
-    @Transactional
-    @RequestMapping("list-alugueis-user.priv")
-    public String listarAlugueisUsuario(Model model, String nome, String login, HttpSession session) {
-        Usuario userSessao = (Usuario) session.getAttribute("usuario");
-        Long idUsuarioSessao = userSessao.getId();
-        Usuario userBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, idUsuarioSessao);
-//        model.addAttribute("alugueis", hibernateDAO.listaObjetos(Aluguel.class, m, null, null, false));
-        model.addAttribute("usuario", userBanco);
-        return "listar-alugueis-usuario";
-    }
-
-    @Transactional
     @RequestMapping("delete-aluguel.priv")
-    public String deletarAluguel(Long id) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public String deletarAluguel(Long id, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException, ClassNotFoundException {
         Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
         Long carroId = aluguelBanco.getCarro().getId();
         Carro carroBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, carroId);
         carroBanco.setAlugado(false);
         hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Aluguel.class, id));
+        Usuario user = (Usuario) session.getAttribute("usuario");
+        Date date = new Date();
+        hibernateDAO.criaLog(user, aluguelBanco.getId(), "delete", Aluguel.class, date);
         return "forward:list-alugueis-user.priv";
+    }
+
+    //-------------------------------------ROTAS------------------------------------------------------------------------
+
+
+    @Transactional
+    @RequestMapping("list-alugueis.adm")
+    public String listarAlugueis(Model model, String nome, String login, HttpSession session) throws ClassNotFoundException {
+        Map<String, String> m = new HashMap<>();
+        model.addAttribute("alugueis", hibernateDAO.listaObjetos(Aluguel.class, m, null, null, false));
+        Usuario user = (Usuario) session.getAttribute("usuario");
+        Date date = new Date();
+        hibernateDAO.criaLog(user, user.getId(), "read", Aluguel.class, date);
+        return "listar-alugueis";
+    }
+
+    @Transactional
+    @RequestMapping("list-alugueis-user.priv")
+    public String listarAlugueisUsuario(Model model, String nome, String login, HttpSession session) throws ClassNotFoundException {
+        Usuario userSessao = (Usuario) session.getAttribute("usuario");
+        Long idUsuarioSessao = userSessao.getId();
+        Usuario userBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, idUsuarioSessao);
+//        model.addAttribute("alugueis", hibernateDAO.listaObjetos(Aluguel.class, m, null, null, false));
+        model.addAttribute("usuario", userBanco);
+        Usuario user = (Usuario) session.getAttribute("usuario");
+        Date date = new Date();
+        hibernateDAO.criaLog(user, user.getId(), "read", Aluguel.class, date);
+        return "listar-alugueis-usuario";
     }
 
     @Transactional

@@ -16,15 +16,10 @@
 <c:import url="menu.jsp" />
 <c:forEach items="${usuarios}" var="u">
     <ul>
-        <li>${u.nome} / ${u.login} / ${u.senha}</li>
+        <li><c:out value="${u.nome}" />/ <c:out value="${u.login}" /></li>
         <li><a href="delete-usuario.adm?id=${u.id}">Deletar</a></li>
         <li><a href="edit-usuario.adm?id=${u.id}">Editar</a></li>
     </ul>
-    <%--<ul>--%>
-        <%--<c:forEach items="${u.logs}" var="l" >--%>
-            <%--<li>alterou ${l.idObjeto}@${l.classe} em <fmt:formatDate value="${l.dataHora}" pattern="dd/MM/yyyy 'às' HH:mm"/> </li>--%>
-        <%--</c:forEach>--%>
-    <%--</ul>--%>
 </c:forEach>
 </body>
 </html>

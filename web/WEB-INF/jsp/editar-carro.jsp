@@ -16,11 +16,11 @@
 <form action="create-carro.adm" method="post">
     <input type="hidden" name ="id" value="${carro.id}" />
     <p>Marca:</p>
-    <input type="text" name="marca" value="${carro.marca}">
+    <input type="text" name="marca" value="<c:out value="${carro.marca}" />">
     <p>Ano</p>
-    <input type="number" name="ano" value="${carro.ano}">
+    <input type="number" name="ano" value="<c:out value="${carro.ano}" />">
     <p>Placa</p>
-    <input type="text" name="placa" value="${carro.placa}">
+    <input type="text" name="placa" value="<c:out value="${carro.placa}" />">
     <button type="submit"> Editar </button>
 </form>
 </body>
