@@ -28,16 +28,16 @@ public class CarroController {
     @Transactional
     @RequestMapping("create-carro.adm")
     public String cadastraCarro(Carro carro, String token, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException, ClassNotFoundException {
+        // --------------------------------------------------------------------Cross-site request forgery
         String tokenSessao = (String) session.getAttribute("token");
         if(carro.getId() == null) {
             if(token != null && token.equals(tokenSessao)){
                 hibernateDAO.criaObjeto(carro);
-
                 Usuario user = (Usuario) session.getAttribute("usuario");
                 Date date = new Date();
                 hibernateDAO.criaLog(user, carro.getId(), "create", Carro.class, date);
             }
-
+        // --------------------------------------------------------------------Cross-site request forgery
         } else {
             Carro carroBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, carro.getId());
             carroBanco.setId(carro.getId());
@@ -52,16 +52,18 @@ public class CarroController {
 
     @Transactional
     @RequestMapping("delete-carro.adm")
-    public String deletarCarro(Long id, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        try {
+    public String deletarCarro(Long id, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException, ClassNotFoundException {
+        Carro carroBanco = (Carro) hibernateDAO.carregaObjeto(Carro.class, id);
+        if(carroBanco.getAlugueis() != null){
+            session.setAttribute("erro", "Carro nao pode ser deletado pois possuiu um aluguel ativo");
+            return "hello";
+        } else {
             hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Carro.class, id));
             Usuario user = (Usuario) session.getAttribute("usuario");
             Date date = new Date();
             hibernateDAO.criaLog(user, id, "delete", Carro.class, date);
-        } catch (Exception e) {
-            //adicionar algo que nao pode remover caso tenha algum relacionamento
+            return "forward:list-carros.html";
         }
-        return "forward:list-carros.html";
     }
 
 
@@ -72,7 +74,9 @@ public class CarroController {
     @Transactional
     @RequestMapping("cadastrar-carro.adm")
     public String cadastraCarro(HttpSession session) {
+        // --------------------------------------------------------------------Cross-site request forgery
         session.setAttribute("token", util.generateToken());
+        // --------------------------------------------------------------------Cross-site request forgery
         return "cadastrar-carro";
     }
 

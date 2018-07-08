@@ -71,16 +71,20 @@ public class UsuarioController {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         map.put("senha", md.digest(senha.getBytes("ISO-8859-1")));
         Collection usuarios = hibernateDAO.listaObjetosEquals(Usuario.class, map);
+
+        //--------------------------------------------------------------- Força bruta;
         String captcha = request.getParameter("g-recaptcha-response");
         Boolean retorno = CaptchaUtil.verify(captcha);
+        //--------------------------------------------------------------- Força bruta;
         if (usuarios == null || usuarios.isEmpty() || retorno == false) {
-            model.addAttribute("logServidor", "acesso-negado");
+            model.addAttribute("erro", "acesso-negado");
             return "../../index";
         } else {
+            //------------------------------------------------------------Session fixation attack
             session.invalidate();
             HttpSession newSession = request.getSession();
             newSession.setAttribute("usuario", usuarios.toArray()[0]);
-
+            //------------------------------------------------------------Session fixation attack
             Usuario user = (Usuario) newSession.getAttribute("usuario");
             Usuario usuarioBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, user.getId());
             Date date = new Date();
@@ -92,18 +96,18 @@ public class UsuarioController {
 
     @Transactional
     @RequestMapping("delete-usuario.adm")
-    public String deletarUsuario(Long id, HttpSession session) {
-        try {
+    public String deletarUsuario(Long id, HttpSession session) throws ClassNotFoundException {
+        Usuario usuarioBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, id);
+        if(usuarioBanco.getAlugueis() != null && usuarioBanco.getLogs() != null){
+            session.setAttribute("erro", "Usuario nao pode ser deletado");
+            return "hello";
+        } else {
             Usuario user = (Usuario) session.getAttribute("usuario");
             Date date = new Date();
             hibernateDAO.criaLog(user, id, "delete", Usuario.class, date);
             hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Usuario.class, id));
-        } catch (Exception e) {
-            //adicionar algo que nao pode remover caso tenha algum relacionamento
-            session.setAttribute("erro", "usuario possui informacoes relacionadas");
-            return "hello";
+            return "forward:lista-usuarios.adm";
         }
-        return "forward:lista-usuarios.adm";
     }
 
     //-------------------------------------ROTAS------------------------------------------------------------------------

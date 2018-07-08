@@ -56,13 +56,12 @@ public class AluguelController {
     @RequestMapping("editar-aluguel.priv")
     public String editaAluguel(Aluguel aluguel, Long id, HttpSession session, Model model, Long carroId) throws NoSuchAlgorithmException, UnsupportedEncodingException, ClassNotFoundException {
         Long idAluguel = (Long) session.getAttribute("idAluguel");
-
-        if(id.equals(idAluguel)){
-            Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
-            Usuario usuarioSession = (Usuario) session.getAttribute("usuario");
-            Usuario usuarioBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, usuarioSession.getId());
-            if(aluguelBanco.getUsuario().getId().equals(usuarioBanco.getId())){
-
+        Aluguel aluguelBanco = (Aluguel) hibernateDAO.carregaObjeto(Aluguel.class, id);
+        Usuario usuarioSession = (Usuario) session.getAttribute("usuario");
+        Usuario usuarioBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, usuarioSession.getId());
+        //-------------------------------------------------------------------------------------------Hidden manipulation
+        if(id.equals(idAluguel) && aluguelBanco.getUsuario().getId().equals(usuarioBanco.getId())){
+        //-------------------------------------------------------------------------------------------Hidden manipulation
                 //feito para mudar o boolean de alugado
                 Long idCarroVelho = aluguelBanco.getCarro().getId();
                 Carro carroVelho = (Carro) hibernateDAO.carregaObjeto(Carro.class, idCarroVelho);
@@ -77,7 +76,10 @@ public class AluguelController {
                 hibernateDAO.updateObjeto(aluguelBanco);
                 Date date = new Date();
                 hibernateDAO.criaLog(usuarioSession, aluguelBanco.getId(), "update", Aluguel.class, date);
-            }
+
+        } else  {
+            session.setAttribute("erro", "tentativa de ataque");
+            return "hello";
         }
         return "forward:list-alugueis-user.priv";
     }

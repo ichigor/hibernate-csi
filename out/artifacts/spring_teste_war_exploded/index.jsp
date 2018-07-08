@@ -22,5 +22,6 @@
     <div class="g-recaptcha" data-sitekey="6LdBI2IUAAAAAIn_TmZp4rZXGMnh6VfT0layhhqI"></div>
   </form>
   <a href="create-usuario.html">Cadastrar-se</a>
+  <p>${erro}</p>
   </body>
 </html>
